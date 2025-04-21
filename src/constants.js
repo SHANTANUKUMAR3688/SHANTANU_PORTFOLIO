@@ -124,6 +124,6 @@ import edtech from './assets/edtech.png';
       image: food,
       tags: ["React JS", "HTML", "CSS", "JavaScript", "Tailwind CSS", "Redux", "API"],
       github: "https://github.com/codingmastr/Movie-Recommendation-App",
-      webapp: "https://food-delivery-website-mocha.vercel.app/",
+      webapp: "https://food-delivery-delta-nine.vercel.app/",
     },
   ];  
