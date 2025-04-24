@@ -12,6 +12,7 @@ import DAV from './assets/DAV.png'
 import gaming from './assets/gaming.png';
 import food from './assets/food.png';
 import edtech from './assets/edtech.png';
+import book from './assets/book.png';
 
 
   export const experiences = [
@@ -106,14 +107,14 @@ import edtech from './assets/edtech.png';
     },
     {
       id: 1,
-      title: "Ed-tech Website",
+      title: "Book Store Website",
       description:
-        "Developed a feature-rich education-tech website using React.js, Redux, and Tailwind CSS, translating UI/UX mockups into a responsive and user-friendly interface.",
-        name: "Education-tech Website",
-      image: edtech,
-      tags: ["React JS", "HTML", "CSS", "JavaScript", "Tailwind CSS", "Redux"],
+        "Developed a high-performance Book-store website using React.js, Redux, Tailwind CSS, and REST APIs translating UI/UX mockups into a responsive and user-friendly interface.",
+        name: "Book Store Website",
+      image: book,
+      tags: ["React JS", "HTML", "CSS", "JavaScript", "Tailwind CSS", "Redux" , 'Express JS', 'MongoDB', 'API', 'Node JS'],
       github: "https://github.com/codingmastr/CSPrep",
-      webapp: "https://education-tech-website.vercel.app/",
+      webapp: "https://book-store-frontend-24sf.vercel.app/",
     },
     {
       id: 2,
