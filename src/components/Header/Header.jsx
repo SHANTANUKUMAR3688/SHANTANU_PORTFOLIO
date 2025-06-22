@@ -16,6 +16,7 @@ function Header() {
         >
           <img
             src={about}
+            loading='lazy'
             alt="about"
             className="w-[6000px] rouned-full shadow-lg"
           />

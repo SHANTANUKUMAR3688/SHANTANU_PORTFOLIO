@@ -47,7 +47,7 @@ function Skills() {
             />
           </svg>
           <div className="absolute flex flex-col items-center justify-center top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-            <img src={icon} alt={skill} className="w-10 h-10 mb-1" />
+            <img src={icon} alt={skill} className="w-10 h-10 mb-1" loading="lazy"/>
             <p className="text-sm">{skill}</p>
           </div>
         </motion.article>

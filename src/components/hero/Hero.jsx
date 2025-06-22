@@ -89,6 +89,7 @@ const Hero = () => {
             >
               <img
                 src={hero}
+                loading='lazy'
                 alt="Hero Pic"
                 className="absolute inset-0 w-full h-full object-cover z-10 rounded-full shadow-2xl transform transition-transform hover:scale-110 duration-500 ease-in-out"
               />

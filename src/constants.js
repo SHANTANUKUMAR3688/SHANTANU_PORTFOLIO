@@ -13,7 +13,7 @@ import gaming from './assets/gaming.png';
 import food from './assets/food.png';
 import edtech from './assets/edtech.png';
 import book from './assets/book.png';
-
+import agency from "./assets/agency-website.png"
 
   export const experiences = [
     {
@@ -28,12 +28,14 @@ import book from './assets/book.png';
         "CSS",
         "JavaScript",
         "React JS",
+        "Redux",
         "TypeScript",
         "Node JS",
+        "Express JS",
         "Tailwind CSS",
         "MongoDb",
         "Redux",
-        " Next Js",
+        "Next Js",
       ],
     },
     {
@@ -118,6 +120,17 @@ import book from './assets/book.png';
     },
     {
       id: 2,
+      title: "Agency Website",
+      description:
+        "Developed a high-performance Agency website using React.js, Redux, Tailwind CSS, and REST APIs translating UI/UX mockups into a responsive and user-friendly interface.",
+        name: "Book Store Website",
+      image: agency,
+      tags: ["React JS", "HTML", "CSS", "JavaScript", "Tailwind CSS", 'API', 'Framer Motion'],
+      github: "https://github.com/codingmastr/CSPrep",
+      webapp: "https://agency-website-mu-seven.vercel.app/",
+    },
+    {
+      id: 3,
       title: "Food Delivery Website",
       description:
         "Developed a feature-rich food-delivery website using React.js, Redux, and Tailwind CSS, translating UI/UX mockups into a responsive and user-friendly interface.",
@@ -126,5 +139,14 @@ import book from './assets/book.png';
       tags: ["React JS", "HTML", "CSS", "JavaScript", "Tailwind CSS", "Redux", "API"],
       github: "https://github.com/codingmastr/Movie-Recommendation-App",
       webapp: "https://food-delivery-delta-nine.vercel.app/",
+    },
+     {
+        id: 4,
+        title: "Ed-tech Website",
+        description: "Developed a feature-rich education-tech website using React.js, Redux, and Tailwind CSS, translating UI/UX mockups into a responsive and user-friendly interface.",
+        name: "Education-tech Website",
+        image: edtech,
+        webapp: "https://education-tech-website.vercel.app/",
+        tags: ["HTML", "CSS","JavaScript","React.js", "Framer-motion", "Tailwind CSS"],
     },
   ];  

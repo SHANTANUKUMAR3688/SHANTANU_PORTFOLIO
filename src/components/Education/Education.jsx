@@ -42,6 +42,7 @@ const Education = () => {
                 <div className="w-24 h-16 bg-black rounded-md overflow-hidden">
                   <img
                     src={edu.img}
+                    loading="lazy"
                     alt={edu.school}
                     className="w-full h-full object-contain"
                   />

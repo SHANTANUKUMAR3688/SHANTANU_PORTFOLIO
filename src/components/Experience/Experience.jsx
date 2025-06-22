@@ -43,6 +43,7 @@ const Experience = () => {
                 <div className="w-16 h-16 bg-slate-100 rounded-md overflow-hidden">
                   <img
                     src={experience.img}
+                    loading="lazy"
                     alt={experience.company}
                     className="w-full h-full object-contain"
                   />
