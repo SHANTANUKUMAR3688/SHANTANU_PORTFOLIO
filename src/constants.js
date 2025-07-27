@@ -114,7 +114,7 @@ import agency from "./assets/agency-website.png"
         "Developed a high-performance Book-store website using React.js, Redux, Tailwind CSS, and REST APIs translating UI/UX mockups into a responsive and user-friendly interface.",
         name: "Book Store Website",
       image: book,
-      tags: ["React JS", "HTML", "CSS", "JavaScript", "Tailwind CSS", "Redux" , 'Express JS', 'MongoDB', 'API', 'Node JS'],
+      tags: ["React JS", "JavaScript", "Redux" , 'Express JS', 'MongoDB', 'Node JS'],
       github: "https://github.com/codingmastr/CSPrep",
       webapp: "https://book-store-frontend-24sf.vercel.app/",
     },

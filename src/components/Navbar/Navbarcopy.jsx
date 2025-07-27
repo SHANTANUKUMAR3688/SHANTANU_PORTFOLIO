@@ -65,9 +65,9 @@ const Navbar = () => {
                     <motion.div
                         variants={variants}
                         onClick={() => setmenu((prev) => !prev)}
-                        className="bg-white sm:w-2/4 h-[100%] text-black fixed z-10"
-                    >
-                        <div className="px-7 py-6">
+                        className="bg-white w-[50%] h-[100%] text-black fixed z-10 "
+                    > 
+                        <div className="pl-6 py-6">
                             {menu ? <IoClose size={30} /> : <IoMenu size={30} />}
                         </div>
                         {menu && (
@@ -91,7 +91,7 @@ const Navbar = () => {
                 </motion.div>
 
                 <motion.div
-                    className="text-3xl font-bold items-center gap-2 py-6 pr-1"
+                    className="text-3xl font-bold items-center gap-2 py-6 pr-4"
                     initial={{ opacity: 0, x: 100, y: -100 }}
                     animate={{ opacity: 1, x: 0, y: 0 }}
                     transition={{ duration: 0.5 }}

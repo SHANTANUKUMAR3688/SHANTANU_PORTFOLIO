@@ -3,6 +3,7 @@ import { projects } from "../../constants";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
+
 const Work = () => {
   const [selectedProject, setSelectedProject] = useState(null);
 
@@ -11,15 +12,16 @@ const Work = () => {
   };
 
   const handleCloseModal = () => {
-    setSelectedProject(!selectedProject);
+    setSelectedProject(null); // Fixed bug: previously used !selectedProject
   };
+
   const settings = {
     dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 2,
     slidesToScroll: 1,
-     responsive: [
+    responsive: [
       {
         breakpoint: 768,
         settings: {
@@ -30,6 +32,7 @@ const Work = () => {
       },
     ],
   };
+
   return (
     <section
       id="projects"
@@ -45,15 +48,12 @@ const Work = () => {
         </p>
       </div>
 
-      {/* Projects Grid */}
-      <div className="w-full m-auto ">
+      <div className="w-full m-auto">
         <div className="m-10">
           <Slider {...settings}>
             {projects.map((project) => (
               <div key={project.id} className="px-4">
-                {" "}
-                {/* Add horizontal padding here */}
-                <div className="flex flex-col justify-between h-[650px] md:h-[600px] border border-white bg-gray-900 backdrop-blur-md rounded-2xl shadow-2xl overflow-hidden cursor-pointer hover:shadow-purple-500/50 hover:-translate-y-2 transition-transform duration-300">
+                <div className="flex flex-col border border-white bg-gray-900 backdrop-blur-md rounded-2xl shadow-2xl overflow-hidden cursor-pointer hover:shadow-purple-500/50 hover:-translate-y-2 transition-transform duration-300 h-full min-h-[500px]">
                   <div className="p-4">
                     <img
                       src={project.image}
@@ -62,29 +62,31 @@ const Work = () => {
                       className="w-full h-48 object-contain rounded-xl"
                     />
                   </div>
-                  <div className="p-6 flex flex-col flex-grow">
-                    <h3 className="text-2xl font-bold text-white mb-2">
-                      {project.title}
-                    </h3>
-                    <p className="text-gray-500 mb-4 pt-4 line-clamp-3">
-                      {project.description}
-                    </p>
-                    <div className="mb-4">
-                      {project.tags.map((tag, index) => (
-                        <span
-                          key={index}
-                          className="inline-block bg-[#251f38] text-xs font-semibold text-purple-500 rounded-full px-2 py-1 mr-2 mb-2"
-                        >
-                          {tag}
-                        </span>
-                      ))}
+                  <div className="p-6 flex flex-col justify-between flex-grow">
+                    <div>
+                      <h3 className="text-2xl font-bold text-white mb-2">
+                        {project.title}
+                      </h3>
+                      <p className="text-gray-500 mb-4 pt-4 line-clamp-3 min-h-[72px]">
+                        {project.description}
+                      </p>
+                      <div className="mb-4">
+                        {project.tags.map((tag, index) => (
+                          <span
+                            key={index}
+                            className="inline-block bg-[#251f38] text-xs font-semibold text-purple-500 rounded-full px-2 py-1 mr-2 mb-2"
+                          >
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
                     </div>
-                    <div className="mt-auto justify-center flex">
+                    <div className="mt-4 flex justify-center">
                       <a
                         href={project.webapp}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="bg-purple-600 hover:bg-purple-800 text-white lg:px-6 lg:py-1 px-2 py-1 rounded-xl lg:text-lg text-sm font-semibold text-center hover:shadow-2xl hover:cursor-pointer"
+                        className="bg-purple-600 hover:bg-purple-800 text-white lg:px-6 lg:py-1 px-4 py-2 rounded-xl lg:text-lg text-sm font-semibold text-center hover:shadow-2xl"
                       >
                         View Live
                       </a>
@@ -96,7 +98,6 @@ const Work = () => {
           </Slider>
         </div>
       </div>
-      {/* </div> */}
     </section>
   );
 };
