@@ -5,16 +5,6 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 
 const Work = () => {
-  const [selectedProject, setSelectedProject] = useState(null);
-
-  const handleOpenModal = (project) => {
-    setSelectedProject(project);
-  };
-
-  const handleCloseModal = () => {
-    setSelectedProject(null); // Fixed bug: previously used !selectedProject
-  };
-
   const settings = {
     dots: true,
     infinite: true,
@@ -58,8 +48,9 @@ const Work = () => {
                     <img
                       src={project.image}
                       loading="lazy"
+                      decoding="async"
                       alt={project.title}
-                      className="w-full h-48 object-contain rounded-xl"
+                      className="w-full md:h-48 h-24 object-contain rounded-xl"
                     />
                   </div>
                   <div className="p-6 flex flex-col justify-between flex-grow">
